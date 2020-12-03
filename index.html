@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <p class="login">Belépés</p>
+            <p class="reg">Regisztráció</p>
+        </div>
+        <nav>
+            <a href="https://novoparts.hu/hu/"><img src="./img/logo_wh.png" alt="novo parts trade logo" id="logo"></a>
+            <div class="menu">
+                <i class="fas fa-search"></i>
+                <a href="https://novoparts.hu/hu/" class="link">WEBÁRUHÁZ</a>
+                <a href="https://novoparts.hu/hu/info-i-1.html" class="link">INFORMÁCIÓ</a>
+                <a href="https://novoparts.hu/hu/kapcsolat-i-3.html" class="link">KAPCSOLAT</a>
+                <a href="https://gamecenter.hu/hu/darts-sc-23.html" class="link">DARTS</a>
+                <a href="https://gamecenter.hu/hu/biliard-sc-22.html" class="link">BILIÁRD</a>
+                <a href="https://gamecenter.hu/hu/csocso-sc-24.html" class="link">CSOCSÓ</a>
+                <a href="https://gamecenter.hu/hu/poker_keszlet_es_kellek-sc-86.html" class="link">PÓKER</a>
+                <a href="https://szerviz.novoparts.hu/" class="link">SZERVIZ</a>
+                <a href="https://kiosk.novoparts.hu/hu/" class="link">KIOSK</a>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="sign-in-container">
+            <h1>BEJELENTKEZÉS</h1>
+            
+            <form action="">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Jelszó">
+                <input type="submit" value="Bejelentkezek" id="sign-in-button">
+            </form>
+            <div class="sign-buttons">
+                <a href="#">Elfelejtettem a jelszavamat</a>
+                <button class="reg-button">Regisztráció</button>
+            </div>
+            <button class="close-one">X</button>
+        </div>
+        <div class="sign-up-container">
+            <h1>REGISZTRÁCIÓ</h1>
+            <form action="">
+                <input type="text" name="name" placeholder="Név">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Jelszó">
+                <input type="submit" value="Regisztrálok" id="sign-up-button">
+            </form>
+                <div class="sign-buttons">
+                    <button class="login-button">Bejelentkezés</button>
+                </div>
+            <button class="close-two">X</button>
+        </div>
+        <div class="search-container">
+            <div class="checkbox">
+                <label class="container">Minden kategória
+                    <input type="checkbox" onClick="toggle(this)">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Automata alkatrész
+                    <input type="checkbox" name="foo" value="1">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Bankkártya, chipkártya olvasó
+                    <input type="checkbox" name="foo" value="2">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Érintő szenzorok
+                    <input type="checkbox" name="foo" value="3">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Érme- bankjegyszámláló
+                    <input type="checkbox" name="foo" value="4">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Ipari monitor, érintőképernyő
+                    <input type="checkbox" name="foo" value="5">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">KIOSK
+                    <input type="checkbox" name="foo" value="6">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Pénzváltógép
+                    <input type="checkbox" name="foo" value="7">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Ping-pong felszerelés
+                    <input type="checkbox" name="foo" value="8">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Printerek
+                    <input type="checkbox" name="foo" value="9">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <form action="/action_page.php">
+                <input type="text" placeholder="Keresés..." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <button class="close-three">X</button>
+        </div>
+    </header>
+    <div class="main">
+        <div class="container">
+            <div class="card">
+                <h2 class="name">NOVO PARTS</h2>
+                <a href="https://novoparts.hu/hu/" class="go">Megnézem</a>
+                <div class="circle"></div>
+                <a href="https://novoparts.hu/hu/"><img src="./img/novoparts.png" alt="novoparts" class="pic"></a>
+            </div>
+            <div class="card">
+                <h2 class="name">GAMECENTER</h2>
+                <a href="https://gamecenter.hu/hu/" class="go">Megnézem</a>
+                <div class="circle"></div>
+                <a href="https://gamecenter.hu/hu/"><img src="./img/gamecenter.png" alt="gamecenter" class="pic"></a>
+            </div>
+            <div class="card">
+                <h2 class="name">SZERVIZ</h2>
+                <a href="https://szerviz.novoparts.hu/" class="go">Megnézem</a>
+                <div class="circle"></div>
+                <a href="https://szerviz.novoparts.hu/"><img src="./img/szerviz.png" alt="szerviz" class="pic"></a>
+            </div>
+            <div class="card">
+                <h2 class="name">KIOSK</h2>
+                <a href="https://kiosk.novoparts.hu/hu/" class="go">Megnézem</a>
+                <div class="circle"></div>
+                <a href="https://kiosk.novoparts.hu/hu/"><img src="./img/kiosk.png" alt="kiosk" class="pic"></a>
+            </div>
+        </div>
+    </div>
+    <div class="text">
+        <h3>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum.
+        </h3>
+    </div>
+    <footer>
+        <div class="contact">
+            <a href="tel:+36202040131">
+                <h2>+36-20-204-0131</h2>
+            </a>
+            <a href="tel:+36205211605">
+                <h2>+36-20-521-1605</h2>
+            </a>
+            <a href="mailto:novoparts@novoparts.hu">
+                <h2>novoparts@novoparts.hu</h2>
+            </a>
+            <a href="https://www.google.com/maps/place/Budapest,+K%C3%A9sm%C3%A1rk+utca+32,+1158/@47.5297322,19.149316,20z/data=!4m5!3m4!1s0x4741db30e1856e1d:0xc77a46adc157b31d!8m2!3d47.529778!4d19.1495357" target="_blank">
+                <h2>1158. Bp. Késmárk utca 32.</h2>
+            </a>
+
+        </div>
+    </footer>
+
+
+
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+        function toggle(source) {
+            checkboxes = document.getElementsByName('foo');
+            for (var i = 0, n = checkboxes.length; i < n; i++) {
+                checkboxes[i].checked = source.checked;
+            }
+        }
+
+
+        const menuSlide = () => {
+            const burger = document.querySelector('.burger');
+            const menu = document.querySelector('.menu');
+
+
+            burger.addEventListener('click', () => {
+                menu.classList.toggle('menu-active');
+
+                burger.classList.toggle('toggle');
+            });
+        }
+        menuSlide();
+
+        const signIn = () => {
+            const signIn = document.querySelector('.login');
+            const regButton = document.querySelector('.reg-button');
+            const login = document.querySelector('.sign-in-container');
+            const close = document.querySelector('.close-one');
+            const signUp = document.querySelector('.reg');
+            const reg = document.querySelector('.sign-up-container');
+
+
+            signIn.addEventListener('click', () => {
+                login.classList.add('sign-in-active');
+            });
+            close.addEventListener('click', () => {
+                login.classList.remove('sign-in-active');
+            });
+            signUp.addEventListener('click', () => {
+                login.classList.remove('sign-in-active');
+            });
+            signUp.addEventListener('click', () => {
+                reg.classList.add('sign-up-active');
+            });
+            regButton.addEventListener('click', () => {
+                login.classList.remove('sign-in-active');
+            });
+            regButton.addEventListener('click', () => {
+                reg.classList.add('sign-up-active');
+            });
+
+        }
+        signIn();
+
+
+
+        const signUp = () => {
+            const signUp = document.querySelector('.reg');
+            const loginButton = document.querySelector('.login-button');
+            const reg = document.querySelector('.sign-up-container');
+            const close = document.querySelector('.close-two');
+            const signIn = document.querySelector('.login');
+            const login = document.querySelector('.sign-in-container');
+
+            signUp.addEventListener('click', () => {
+                reg.classList.add('sign-up-active');
+            });
+            close.addEventListener('click', () => {
+                reg.classList.remove('sign-up-active');
+            });
+            signIn.addEventListener('click', () => {
+                reg.classList.remove('sign-up-active');
+            });
+            signIn.addEventListener('click', () => {
+                login.classList.add('sign-in-active');
+            });
+            loginButton.addEventListener('click', () => {
+                reg.classList.remove('sign-up-active');
+            });
+            loginButton.addEventListener('click', () => {
+                login.classList.add('sign-in-active');
+            });
+        }
+        signUp();
+
+
+
+
+        const searchFade = () => {
+            const searchIcon = document.querySelector('.fas');
+            const searchBar = document.querySelector('.search-container');
+            const close = document.querySelector('.close-three');
+
+            searchIcon.addEventListener('click', () => {
+                searchBar.classList.add('search-active');
+            });
+            close.addEventListener('click', () => {
+                searchBar.classList.remove('search-active');
+            });
+        }
+        searchFade();
+
+
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 20,
+            speed: 400
+        });
+    </script>
+</body>
+
+</html>
