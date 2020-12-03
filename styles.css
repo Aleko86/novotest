@@ -605,6 +605,14 @@ form button{
         flex-direction: column;
         top:40%;
     }
+    .search-container form{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width: 60%;
+        height:100px; 
+    }
     form{
         position: absolute;
         top:30%;
@@ -703,7 +711,7 @@ form button{
     border-bottom: 2px solid rgb(255, 255, 255);
     }
     .search-container, .sign-in-container, .sign-up-container{
-        top:10%;
+        top:5%;
         margin:0;
         position: absolute;
         z-index: 998;
