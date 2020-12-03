@@ -584,6 +584,11 @@ form button{
     .container .card{
     margin:10px;
     }
+    .sign-in-container h1, .sign-up-container h1{
+        position: absolute;
+        top:25%;
+        font-size: 1.5em;
+    }
     
 }
 @media screen and (max-width: 880px){
