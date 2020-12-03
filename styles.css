@@ -128,6 +128,7 @@ h1{
     color: rgb(255, 255, 255);
     font-size: .8em;
     text-decoration: none;
+    margin:15px;
 }
 .sign-buttons button, #sign-in-button,#sign-up-button{
     color: rgb(255, 255, 255);
@@ -144,6 +145,7 @@ h1{
     color: rgba(255, 255, 255, .5);
     font-size: .8em;
     border-left:3px solid rgba(43, 209, 1, 0);
+    margin:50px;
 }
 #sign-in-button:hover,#sign-up-button:hover{
     letter-spacing: 3px;
@@ -569,12 +571,7 @@ form button{
     
 }
 @media screen and (max-width: 1145px){
-    body{
-        text-align:center;
-        background-color: rgb(24, 43, 70);
-        min-height:100vh;
-        overflow-x: hidden;
-    }
+   
     #logo{
         margin:20px auto;
     }
@@ -598,6 +595,10 @@ form button{
     
 }
 @media screen and (max-width: 880px){
+    body{
+        width:100vw;
+        overflow: hidden;
+    }
     #logo{
         width: 50%;
         margin:20px;
@@ -609,57 +610,35 @@ form button{
     }
     .container .card .name{
         position:absolute;
-        top:50%;
-        left:0;
+        top:10%;
+        left:15%;
         text-align:center;
         color:rgb(255, 255, 255);
         width:100%;
-        transform-style:preserve-3d;
-        transform:translate3d(0,-50%,75px);
+        transform:translate(0,-10%);
         transition:.5s;
-        opacity:0;
+        opacity: 1;
         z-index:10;
-    }
-    .container .card:hover .name{
-        top:50%;
-        opacity:1;
     }
     .container .card .go{
         position:absolute;
         bottom:0;
         left:90%;
-        transform-style:preserve-3d;
-        transform:translate3d(-90%,0,120px);
+        transform:translate(-90%,0);
         background:rgb(51, 51, 51);
         color:rgb(255, 255, 255);
         border-radius:30px;
-        padding:10px 25px;
+        padding:5px 10px;
         text-decoration: none;
         transition:.5s;
-        opacity:0;
+        opacity: 1;
         z-index:10;
-    }
-    .container .card:hover .go{
-        bottom:20px;
-        opacity:1;
-    }
-    .container .card:hover .name{
-        top:50%;
     }
     .container .card .pic{
         max-width:80px;
         top:50%;
-        left:20%;
-        transform-style:preserve-3d;
-        transform:translate3d(-20%,-50%,120px);
-    }
-    .container .card:hover .pic{
-        max-width:120px;
-        top:50%;
-        left:20%;
-        transform-style:preserve-3d;
-        transform:translate3d(-20%,-50%,120px);
-
+        left:10%;
+        transform:translate(-20%,-50%);
     }
     .container .card .circle{
         display: none;
@@ -668,6 +647,14 @@ form button{
         display: flex;
         flex-wrap: wrap;
       }
+      form{
+        position: absolute;
+        top:70%;
+        left:50%;
+        transform: translate(-50%,-70%);
+        width: 60%;
+        height:100px; 
+    }
     form input{
     width: 100%;
     height: 40px;
@@ -677,5 +664,32 @@ form button{
     border:none;
     outline: none;
     border-bottom: 2px solid rgb(255, 255, 255);
+    }
+    .search-container, .sign-in-container, .sign-up-container{
+        margin:0;
+        position: absolute;
+        z-index: 998;
+        width: 100%;
+        height:100%;
+        font-size:1.2em;
+        background-color:rgba(24, 43, 70, 0.973);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform .3s ease-in;
+        /*
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top:0;
+        left:100%;
+        
+        z-index: 999;
+        background-color: rgba(24, 43, 70, 0.973);   
+        */
+    }
+    .search-active, .sign-in-active, .sign-up-active{
+        transform: translateX(0%);
     }
 }
