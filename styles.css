@@ -569,6 +569,12 @@ form button{
     
 }
 @media screen and (max-width: 1145px){
+    body{
+        text-align:center;
+        background-color: rgb(24, 43, 70);
+        min-height:100vh;
+        overflow-x: hidden;
+    }
     #logo{
         margin:20px auto;
     }
