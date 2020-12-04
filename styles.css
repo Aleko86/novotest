@@ -591,9 +591,6 @@ form button{
         margin:5px;
         padding:10px 10px;
     }
-    .container .card{
-    margin:10px;
-    }
     .sign-in-container h1, .sign-up-container h1{
         position: absolute;
         top:5%;
@@ -621,25 +618,64 @@ form button{
         width: 60%;
         height:100px; 
     }
+
 }
-@media screen and (max-width: 880px){
+
     
+@media screen and (max-width: 880px){
     body{
         width: 100vw;
         position: absolute;
-        text-align:center;
+        text-align:left;
         background-color: rgb(24, 43, 70);
         overflow-x: hidden;
-        
+    }
+    nav{
+        margin: 0;
+        padding:10px 0;
+        display: flex;
+        justify-content: space-between;
     }
     #logo{
         width: 50%;
         margin:20px;
     }
+    .container{
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        width:1600px;
+        
+    }
     .container .card{
         width:80%;
         height:100px;
         margin:10px;
+    }
+    .container .card::before{
+        content:'';
+        position:absolute;
+        top:20px;
+        left:20px;
+        font-size:1em;
+        font-weight:900;
+        color:rgba(255, 255, 255, 0.4);
+        opacity:0;
+        transition:.3s ease-in-out;  
+    }
+    .container .card::after{
+        content:'';
+        position:absolute;
+        bottom:20px;
+        right:20px;
+        font-size:1.3em;
+        font-weight:900;
+        color: rgba(255, 255, 255, 0.4);
+        opacity:0;
+        transition:.3s ease;
+        
     }
     .container .card .name{
         position:absolute;
@@ -653,6 +689,11 @@ form button{
         opacity: 1;
         z-index:10;
     }
+    .container .card:hover .name{
+        top:10%;
+        opacity:1;
+    }
+    
     .container .card .go{
         position:absolute;
         bottom:0;
@@ -667,15 +708,29 @@ form button{
         opacity: 1;
         z-index:10;
     }
+    .container .card:hover .go{
+        bottom:0;
+        opacity:1;
+    }
     .container .card .pic{
         max-width:80px;
         top:50%;
         left:10%;
-        transform:translate(-20%,-50%);
+        transform:translate(-10%,-50%);
+    }
+    .container .card:hover .pic{
+        position:absolute;
+        max-width:80px;
+        top:50%;
+        left:10%;
+        transform:translate(-10%,-50%);
+        z-index:11;
+        transition:.5s;
     }
     .container .card .circle{
         display: none;
-    }
+    }  
+    
     .menu{
         margin:0;
         padding:10%;
@@ -711,7 +766,7 @@ form button{
     border-bottom: 2px solid rgb(255, 255, 255);
     }
     .search-container, .sign-in-container, .sign-up-container{
-        top:5%;
+        top:10%;
         margin:0;
         position: absolute;
         z-index: 998;
