@@ -733,7 +733,7 @@ form button{
     
     .menu{
         margin:0;
-        padding:10%;
+        padding:20%;
         position: absolute;
         z-index: 998;
         width: 100%;
@@ -793,4 +793,5 @@ form button{
     .search-active, .sign-in-active, .sign-up-active{
         transform: translateX(0%);
     }
+
 }
