@@ -739,6 +739,7 @@ form button{
         width: 100%;
         height:100%;
         font-size:1em;
+        line-height: 1em;
         background-color:rgba(24, 43, 70, 0.973);
         display: flex;
         flex-direction: column;
