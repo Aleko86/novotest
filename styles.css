@@ -603,6 +603,13 @@ form button, .search_button{
     
 }
 @media screen and (max-width: 1145px){
+    *{
+        cursor: auto;
+    }
+    .cursor{
+        display: none;
+    }
+
     #logo{
         margin:20px auto;
     }
