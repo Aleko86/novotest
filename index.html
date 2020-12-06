@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="hu">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <title>Document</title>
-</head>
-
-<body>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <title>Document</title>
+    </head>
+    <body>  
+        <div class="cursor"></div>  
     <header>
         <div class="top">
             <p class="login">Belépés</p>
@@ -22,7 +22,7 @@
         <nav>
             <a href="https://novoparts.hu/hu/"><img src="./img/logo_wh.png" alt="novo parts trade logo" id="logo"></a>
             <div class="menu">
-                <i class="fas fa-search"></i>
+                <button class="search_button"><i class="fas fa-search"></i></button>
                 <a href="https://novoparts.hu/hu/" class="link">WEBÁRUHÁZ</a>
                 <a href="https://novoparts.hu/hu/info-i-1.html" class="link">INFORMÁCIÓ</a>
                 <a href="https://novoparts.hu/hu/kapcsolat-i-3.html" class="link">KAPCSOLAT</a>
@@ -31,7 +31,7 @@
                 <a href="https://gamecenter.hu/hu/csocso-sc-24.html" class="link">CSOCSÓ</a>
                 <a href="https://gamecenter.hu/hu/poker_keszlet_es_kellek-sc-86.html" class="link">PÓKER</a>
                 <a href="https://szerviz.novoparts.hu/" class="link">SZERVIZ</a>
-                <a href="https://kiosk.novoparts.hu/hu/" class="link">KIOSK</a>
+                <a href="https://kiosk.novoparts.hu/hu/" class="link">KIOSK</a>  
             </div>
             <div class="burger">
                 <div class="line1"></div>
@@ -39,11 +39,8 @@
                 <div class="line3"></div>
             </div>
         </nav>
-        
-        
         <div class="sign-in-container">
             <h1>BEJELENTKEZÉS</h1>
-            
             <form action="/action_page.php">
                 <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Jelszó">
@@ -63,9 +60,9 @@
                 <input type="password" name="password" placeholder="Jelszó">
                 <input type="submit" value="Regisztrálok" id="sign-up-button">
             </form>
-                <div class="sign-buttons">
-                    <button class="login-button">Bejelentkezés</button>
-                </div>
+            <div class="sign-buttons">
+                <button class="login-button">Bejelentkezés</button>
+            </div>
             <button class="close-two">X</button>
         </div>
         <div class="search-container">
@@ -117,7 +114,7 @@
             </form>
             <button class="close-three">X</button>
         </div>
-    
+        
     </header>
     <div class="main">
         <div class="container">
@@ -145,6 +142,7 @@
                 <div class="circle"></div>
                 <a href="https://kiosk.novoparts.hu/hu/"><img src="./img/kiosk.png" alt="kiosk" class="pic"></a>
             </div>
+           
         </div>
     </div>
     <div class="text">
@@ -171,14 +169,74 @@
             <a href="https://www.google.com/maps/place/Budapest,+K%C3%A9sm%C3%A1rk+utca+32,+1158/@47.5297322,19.149316,20z/data=!4m5!3m4!1s0x4741db30e1856e1d:0xc77a46adc157b31d!8m2!3d47.529778!4d19.1495357" target="_blank">
                 <h2>1158. Bp. Késmárk utca 32.</h2>
             </a>
-
+            
+            
         </div>
     </footer>
-
-
-
+    
+    
+    
     <script src="vanilla-tilt.min.js"></script>
     <script>
+        let myCursor = document.querySelector('.cursor');
+        let menuLinks = document.querySelectorAll('a');
+        let cards = document.querySelectorAll('.card');
+        let buttons = document.querySelectorAll('button');
+        let topLinks = document.querySelectorAll('.top p');
+        let inputs = document.querySelectorAll('input');
+       
+
+        window.addEventListener('mousemove',cursor);
+
+        function cursor(e){
+            myCursor.style.top = e.pageY + "px"; 
+            myCursor.style.left = e.pageX + "px"; 
+        }
+
+        menuLinks.forEach(link =>{
+            link.addEventListener('mouseover',() => {
+                myCursor.classList.add('cursor-grow')
+            });
+            link.addEventListener('mouseleave',() => {
+                myCursor.classList.remove('cursor-grow')
+            });
+        });
+        cards.forEach(card =>{
+            card.addEventListener('mouseover',() => {
+                myCursor.classList.add('cursor-grow')
+            });
+            card.addEventListener('mouseleave',() => {
+                myCursor.classList.remove('cursor-grow')
+            });
+        });
+        buttons.forEach(button =>{
+            button.addEventListener('mouseover',() => {
+                myCursor.classList.add('cursor-grow')
+            });
+            button.addEventListener('mouseleave',() => {
+                myCursor.classList.remove('cursor-grow')
+            });
+        });
+        topLinks.forEach(link =>{
+            link.addEventListener('mouseover',() => {
+                myCursor.classList.add('cursor-grow')
+            });
+            link.addEventListener('mouseleave',() => {
+                myCursor.classList.remove('cursor-grow')
+            });
+        });
+        inputs.forEach(input =>{
+            input.addEventListener('mouseover',() => {
+                myCursor.classList.add('cursor-grow')
+            });
+            input.addEventListener('mouseleave',() => {
+                myCursor.classList.remove('cursor-grow')
+            });
+        });
+        
+
+        
+
         function toggle(source) {
             checkboxes = document.getElementsByName('foo');
             for (var i = 0, n = checkboxes.length; i < n; i++) {
