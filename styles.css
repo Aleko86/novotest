@@ -14,7 +14,7 @@
     position: absolute;
     transform: translate(-50%, -50%);
     transition: all .3s ease;
-    transition-property: transform, background, mix-blend-mode;
+    transition-property: transform, background;
     transform-origin: 100% 100%;
     pointer-events: none;
     z-index: 10000;
@@ -22,6 +22,8 @@
 }
 .cursor-grow{
     transform: scale(2);
+    background: rgb(255, 255, 255);
+    mix-blend-mode: difference;
     
 }
 html, body{
@@ -35,6 +37,7 @@ body{
     position: absolute;
     text-align:center;
     background-color: rgb(24, 43, 70);
+    
     
 }
 header{
@@ -297,7 +300,6 @@ form button, .search_button{
     width:1600px;
     transform-style:preserve-3d;
 }
-
 .container .card{
     position:relative;
     width:300px;
